@@ -48,13 +48,15 @@ $attributes = array('id' => 'login_form', 'class' => 'form_horizontal');
 
 <!-- this is to throw session error for form_validation -->
 <!-- if endif start -->
+
 <?php if( $this->session->flashdata('errors'))://flashdata?>
-
-<?php echo $this->session->flashdata('errors');?>
-
+ <?php echo $this->session->flashdata('errors');?>
 <?php endif; ?>
-
 <!-- if endif finish -->
+
+
+
+
 
 
 
@@ -64,6 +66,7 @@ $attributes = array('id' => 'login_form', 'class' => 'form_horizontal');
 //this will open form
 echo form_open('/users/login', $attributes);
 // this will do like
+
 //<form action=""></form>
 ?>
 
@@ -133,7 +136,7 @@ echo form_open('/users/login', $attributes);
 <!-- this way we can apply class to form input fields -->
 <?php  $form_data = array(
     
-    'class'=> 'btn btn-primary',
+    'class'=> 'btn btn-primary btn-block',
     'name'=> 'submit',
     'value' => 'Login'
 
