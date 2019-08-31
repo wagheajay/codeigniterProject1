@@ -10,7 +10,7 @@ class User_model extends CI_Model{
     public function create_user(){
 
 
-        $options = ['const'=>12];
+        $options = ['cost'=>12];
           
         //using password_hash() function to hash password we can pass three or two parameters for security
           $encrypted_password = password_hash( $this->input->post('password'),PASSWORD_BCRYPT,$options);
